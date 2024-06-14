@@ -1,0 +1,176 @@
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header.hero {
+    background: url('https://st2.depositphotos.com/3378121/5193/i/450/depositphotos_51933801-stock-photo-labrador-puppies-in-a-basket.jpg'); /* poner imagen de preferencia */
+    background-size: cover;
+    background-position: center top; /* Ajustado para centrar verticalmente */
+    background-attachment: fixed;
+    height: 100vh;   /* espacio que ocupa en la pantalla, depende si alguna persona quiere poner un proyecto o imagen en grande, tipo hero */
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecer un poco la imagen de fondo */
+    z-index: -1;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+ .about-section {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 30px; /* Espacio entre secciones */
+}
+
+.profile-wrapper {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    margin-right: 40px; /* Espacio a la derecha de la imagen */
+}
+
+.about-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.profile-pic {
+    width: 300px; /* Tamaño de la imagen */
+    height: 300px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Borde redondeado */
+    border: 3px solid #dadada; /* Borde blanco */
+    object-fit: cover; /* Ajuste de la imagen */
+}
+
+
+main {
+    background: #dadada;
+    padding: 2rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+img {
+    max-width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    border-radius: 5px;
+    
+}
+
+.container {
+    columns: 3 320px;
+    column-gap: 40px;
+}
+
+.box {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 #0007;
+}
+
+.box:hover .overlay {
+    height: 100%;
+    cursor: pointer; 
+}
+
+.overlay h2 {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000000b2;
+    width: 100%;
+    height: 0%;
+    border-radius: 3px;
+    transition: .5 ease;
+    overflow: hidden;
+}
